@@ -1,4 +1,13 @@
-# 0.2.0 (2025-01-16)
+# [0.3.0](https://github.com/JCO-Digital/jcore-security/compare/v0.2.0...v0.3.0) (2025-01-16)
+
+
+### Features
+
+* Ported security class from jcore2 ([4ccf82b](https://github.com/JCO-Digital/jcore-security/commit/4ccf82b330556f757dbf1b3528e630d5ab22c0f9))
+
+
+
+# [0.2.0](https://github.com/JCO-Digital/jcore-security/compare/03c40be0f7d60a028ca065aa586082d7f3da5477...v0.2.0) (2025-01-16)
 
 
 ### Bug Fixes
