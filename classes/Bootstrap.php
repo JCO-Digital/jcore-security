@@ -23,7 +23,8 @@ class Bootstrap implements BootstrapInterface {
 	 * Bootstrap constructor.
 	 */
 	private function __construct() {
-		// TODO: Add stuff here to use
+		ContentSecurityPolicy::init();
+		add_action( 'acf/init', '\Jcore\Security\Bootstrap::add_menu_page' );
 	}
 
 	/**
@@ -37,5 +38,22 @@ class Bootstrap implements BootstrapInterface {
 		}
 
 		return self::$instance;
+	}
+
+	/**
+	 * Add the settings page.
+	 *
+	 * @return void
+	 */
+	public static function add_menu_page(): void {
+		$child = acf_add_options_sub_page(
+			array(
+				'page_title'  => __( 'Security Settings' ),
+				'menu_title'  => __( 'Security' ),
+				'menu_slug'   => 'security',
+				'capability'  => 'manage_options',
+				'parent_slug' => 'options-general.php',
+			)
+		);
 	}
 }
