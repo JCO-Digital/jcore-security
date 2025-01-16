@@ -1,5 +1,6 @@
-# JCORE Template module
-A JCORE Template module.
+# JCORE Security module
+
+A JCORE module that implements CSPs and other security related things.
 
 # TODOs for new modules:
 
@@ -10,6 +11,6 @@ A JCORE Template module.
 
 - Enable GH Actions
 - Add a PAT token to the secrets of the repository to enable the Github Actions workflow. (the precise name is found in .github/workflows/push.yml)
-  -  The PAT should have access to push to the repository at the very least.
+  - The PAT should have access to push to the repository at the very least.
 - Add push protection to the main branch
 - Setup a new package on packagist.org that tracks this repository
