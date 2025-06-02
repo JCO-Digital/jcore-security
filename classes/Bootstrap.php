@@ -24,7 +24,7 @@ class Bootstrap implements BootstrapInterface {
 	 */
 	private function __construct() {
 		ContentSecurityPolicy::init();
-		add_action( 'acf/init', '\Jcore\Security\Bootstrap::add_menu_page' );
+		self::add_menu_page();
 	}
 
 	/**
