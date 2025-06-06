@@ -30,7 +30,9 @@ class Bootstrap implements BootstrapInterface {
 	/**
 	 * Get the singleton instance.
 	 *
-	 * @return Bootstrap
+	 * Returns the single instance of the Bootstrap class, creating it if it does not already exist.
+	 *
+	 * @return Bootstrap The singleton instance of the Bootstrap class.
 	 */
 	public static function init(): Bootstrap {
 		if ( null === self::$instance ) {
@@ -41,19 +43,26 @@ class Bootstrap implements BootstrapInterface {
 	}
 
 	/**
-	 * Add the settings page.
+	 * Adds the Security settings submenu page to the WordPress admin,
+	 * under the 'Settings' menu, if the ACF plugin function exists .
 	 *
-	 * @return void
+	 * This uses the Advanced Custom Fields( ACF ) function * acf_add_options_sub_page to register a new options sub page()
+	 * for managing security - related settings .
+	 *
+	 * The submenu will appear as 'Security' under 'Settings' and
+	 * will be accessible to users with the 'manage_options' capability .
 	 */
 	public static function add_menu_page(): void {
-		$child = acf_add_options_sub_page(
-			array(
-				'page_title'  => __( 'Security Settings' ),
-				'menu_title'  => __( 'Security' ),
-				'menu_slug'   => 'security',
-				'capability'  => 'manage_options',
-				'parent_slug' => 'options-general.php',
-			)
-		);
+		if ( function_exists( 'acf_add_options_sub_page' ) ) {
+			acf_add_options_sub_page(
+				array(
+					'page_title'  => __( 'Security Settings' ),
+					'menu_title'  => __( 'Security' ),
+					'menu_slug'   => 'security',
+					'capability'  => 'manage_options',
+					'parent_slug' => 'options-general.php',
+				)
+			);
+		}
 	}
 }
