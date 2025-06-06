@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/JCO-Digital/jcore-security/compare/v0.3.1...v0.3.2) (2025-06-06)
+
+
+### Bug Fixes
+
+* Check for ACF so that module doesn't cause an error if not loaded. ([9649417](https://github.com/JCO-Digital/jcore-security/commit/96494175ad9f7ce4518fbfc5ec75dbfa0e8624cc))
+
+
+
 ## [0.3.1](https://github.com/JCO-Digital/jcore-security/compare/v0.3.0...v0.3.1) (2025-06-02)
 
 
