@@ -1,3 +1,13 @@
+## [0.3.3](https://github.com/JCO-Digital/jcore-security/compare/v0.3.2...v0.3.3) (2025-11-14)
+
+
+### Bug Fixes
+
+* composer version formatting ([34a4cd7](https://github.com/JCO-Digital/jcore-security/commit/34a4cd785cf59beab3fcbede1fba6fc7e148e509))
+* ydin dependency fix ([972e169](https://github.com/JCO-Digital/jcore-security/commit/972e169590ca657733d5d03d8fbe8a6614616bad))
+
+
+
 ## [0.3.2](https://github.com/JCO-Digital/jcore-security/compare/v0.3.1...v0.3.2) (2025-06-06)
 
 
